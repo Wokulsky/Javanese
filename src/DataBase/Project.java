@@ -11,8 +11,10 @@ public class Project implements Serializable {
     private String descritpion;
     private LocalDate start;
     private LocalDate end;
-    private Money budget;
-    private Money cost;
+    private float budget;
+    private float cost;
+    //private Money cost;
+    //private Money budget;
 
     public int getId() {
         return id;
@@ -28,6 +30,19 @@ public class Project implements Serializable {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    @Override
+    public String toString() {
+        return "Project{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", descritpion='" + descritpion + '\'' +
+                ", start=" + start +
+                ", end=" + end +
+                ", budget=" + budget +
+                ", cost=" + cost +
+                '}';
     }
 
     public String getDescritpion() {
@@ -54,19 +69,19 @@ public class Project implements Serializable {
         this.end = end;
     }
 
-    public Money getBudget() {
+    public float getBudget() {
         return budget;
     }
 
-    public void setBudget(Money budget) {
+    public void setBudget(float budget) {
         this.budget = budget;
     }
 
-    public Money getCost() {
+    public float getCost() {
         return cost;
     }
 
-    public void setCost(Money cost) {
+    public void setCost(float cost) {
         this.cost = cost;
     }
 }

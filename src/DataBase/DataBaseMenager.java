@@ -26,7 +26,7 @@ public class DataBaseMenager {
         transaction = session.beginTransaction();
     }
 
-    public DataBaseMenager getInstance(){
+    static public DataBaseMenager getInstance(){
         if (instance == null) instance = new DataBaseMenager();
         return instance;
     }
